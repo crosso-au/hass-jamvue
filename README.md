@@ -3,8 +3,13 @@
 <p align="center"><img src="branding/icon.png" alt="JamVue" width="320"></p>
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![hacs_badge](https://img.shields.io/github/release-date-pre/crosso-au/hass-jamvue)](https://github.com/hacs/integration)
+[![hacs_badge](https://badgen.net/github/release/crosso-au/hass-jamvue)](https://github.com/hacs/integration)
+[![hacs_badge](https://badgen.net/github/last-commit/crosso-au/hass-jamvue/main)](https://github.com/hacs/integration)
 
 A Home Assistant integration for [JamVue](https://jamvue.com) - Jamvue taps your turntable's output directly, no microphone, completely privately - and identifies what's spinning in real time on a dedicated display.
+
+[![hacs_badge](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=crosso-au&repository=hass-jamvue&category=integration)
 
 ## How it works
 
