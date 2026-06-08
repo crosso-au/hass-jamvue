@@ -1,0 +1,14 @@
+{
+  "domain": "jamvue",
+  "name": "JamVue",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["webhook"],
+  "documentation": "https://jamvue.com/help",
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "issue_tracker": "https://jamvue.com/help",
+  "requirements": [],
+  "single_config_entry": false,
+  "version": "1.3.0"
+}

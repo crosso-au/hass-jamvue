@@ -1,0 +1,27 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up JamVue",
+        "description": "JamVue will POST to Home Assistant whenever a vinyl track is identified.\n\nCopy the appropriate webhook URL below into JamVue's webhook settings, then submit. Use the **External** URL if JamVue runs in the cloud; use **Internal** only if JamVue is on your local network.\n\n{webhook_urls}\n\n_Need this URL again later? Open **Settings → Devices & Services → JamVue → Configure**, or search your logs for \"JamVue webhook\"._"
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "JamVue is already configured. Only one instance is allowed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "JamVue webhook URL",
+        "description": "Paste the appropriate URL into JamVue's webhook settings. Use the **External** URL if JamVue runs in the cloud; use **Internal** only if JamVue is on your local network.\n\n{webhook_urls}",
+        "data": {
+          "base_url": "External URL override (optional)"
+        },
+        "data_description": {
+          "base_url": "Leave blank to use Home Assistant's detected URLs. Set this to force a specific address, e.g. https://homeassistant.example.com — it will be shown first above. Clear it to revert."
+        }
+      }
+    }
+  }
+}
