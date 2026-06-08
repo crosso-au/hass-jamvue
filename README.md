@@ -1,6 +1,6 @@
 # JamVue for Home Assistant
 
-<p align="center"><img src="branding/icon.png" alt="JamVue" width="320"></p>
+<p align="center"><img src="https://github.com/crosso-au/hass-jamvue/raw/main/branding/icon.png" alt="JamVue" width="320"></p>
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![hacs_badge](https://img.shields.io/github/release-date-pre/crosso-au/hass-jamvue)](https://github.com/hacs/integration)
