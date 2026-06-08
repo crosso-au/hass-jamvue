@@ -49,7 +49,7 @@ Copy the `custom_components/jamvue` folder into your HA `config/custom_component
      is on the same LAN.
 3. Copy the appropriate URL, submit the dialog, and paste it into JamVue's webhook configuration.
 
-> **Note:** JamVue must be able to reach this URL. If JamVue runs in the cloud, your Home Assistant needs to be reachable from the internet (e.g. via [Home Assistant Cloud / Nabu Casa](https://www.nabucasa.com/) or a reverse proxy). The webhook id acts as a secret - keep the URL private.
+> **Note:** JamVue must be able to reach this URL. If JamVue runs in the cloud, your Home Assistant needs to be reachable from the internet (e.g. via [Home Assistant Cloud / Nabu Casa](https://www.nabucasa.com/) or a reverse proxy). The webhook id acts as a secret - **keep the URL private.**
 
 ### Finding the URL again
 
