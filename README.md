@@ -1,15 +1,15 @@
-# JamVue for Home Assistant
+# Jamvue for Home Assistant
 
-<p align="center"><img src="https://github.com/crosso-au/hass-jamvue/raw/main/branding/icon.png" alt="JamVue" width="320"></p>
+<p align="center"><img src="https://github.com/crosso-au/hass-Jamvue/raw/main/branding/icon.png" alt="Jamvue" width="320"></p>
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-[![hacs_badge](https://img.shields.io/github/release-date-pre/crosso-au/hass-jamvue)](https://github.com/crosso-au/hass-jamvue)
-[![hacs_badge](https://badgen.net/github/release/crosso-au/hass-jamvue)](https://github.com/crosso-au/hass-jamvue/releases)
-[![hacs_badge](https://badgen.net/github/last-commit/crosso-au/hass-jamvue/main)](https://github.com/crosso-au/hass-jamvue)
+[![hacs_badge](https://img.shields.io/github/release-date-pre/crosso-au/hass-Jamvue)](https://github.com/crosso-au/hass-Jamvue)
+[![hacs_badge](https://badgen.net/github/release/crosso-au/hass-Jamvue)](https://github.com/crosso-au/hass-Jamvue/releases)
+[![hacs_badge](https://badgen.net/github/last-commit/crosso-au/hass-Jamvue/main)](https://github.com/crosso-au/hass-Jamvue)
 
-A Home Assistant integration for [JamVue](https://jamvue.com) - Jamvue taps your turntable's output directly, no microphone, completely privately - and identifies what's spinning in real time on a dedicated display.
+A Home Assistant integration for [Jamvue](https://Jamvue.com) - Jamvue taps your turntable's output directly, no microphone, completely privately - and identifies what's spinning in real time on a dedicated display.
 
-[![hacs_badge](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=crosso-au&repository=hass-jamvue&category=integration)
+[![hacs_badge](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=crosso-au&repository=hass-Jamvue&category=integration)
 
 ## How it works
 
@@ -22,11 +22,11 @@ A short audio snippet is sent to our service and matched against a database of t
 4. Display the track
 Title, artist and your listening history appear on the crisp, dedicated Jamvue display wherever you like.
 
-### Now for JamVue for HomeAssistant
-1. JamVue fires a webhook `POST` to Home Assistant with the resolved track metadata.
+### Now for Jamvue for HomeAssistant
+1. Jamvue fires a webhook `POST` to Home Assistant with the resolved track metadata.
 2. This integration receives that webhook and updates a `media_player` entity with the current artist, title, album, and artwork.
 
-It also fires a `jamvue_track_resolved` event on the Home Assistant event bus for every payload received, so you can build your own automations on top of it.
+It also fires a `Jamvue_track_resolved` event on the Home Assistant event bus for every payload received, so you can build your own automations on top of it.
 
 ## Installation
 
@@ -34,34 +34,34 @@ It also fires a `jamvue_track_resolved` event on the Home Assistant event bus fo
 
 1. Open HACS → Integrations → ⋮ → **Custom repositories**.
 2. Add this repository's URL with category **Integration**.
-3. Search for **JamVue** and install.
+3. Search for **Jamvue** and install.
 4. Restart Home Assistant.
 
 ### Manual
 
-Copy the `custom_components/jamvue` folder into your HA `config/custom_components/` directory and restart.
+Copy the `custom_components/Jamvue` folder into your HA `config/custom_components/` directory and restart.
 
 ## Setup
 
-1. Go to **Settings → Devices & Services → Add Integration** and search for **JamVue**.
+1. Go to **Settings → Devices & Services → Add Integration** and search for **Jamvue**.
 2. The setup dialog shows your unique **webhook URL(s)**. Depending on your Home
    Assistant network config, you'll see:
    - **External** - your configured external/Nabu Casa address
-     (e.g. `https://homeassistant.example.com/api/webhook/<id>`). Use this if JamVue
+     (e.g. `https://homeassistant.example.com/api/webhook/<id>`). Use this if Jamvue
      runs in the cloud.
    - **Internal** - your local-network address
-     (e.g. `http://192.168.X.XXX:8123/api/webhook/<id>`). Use this only if JamVue
+     (e.g. `http://192.168.X.XXX:8123/api/webhook/<id>`). Use this only if Jamvue
      is on the same LAN.
-3. Copy the appropriate URL, submit the dialog, and paste it into JamVue's webhook configuration.
+3. Copy the appropriate URL, submit the dialog, and paste it into Jamvue's webhook configuration.
 
-> **Note:** JamVue must be able to reach this URL. If JamVue runs in the cloud, your Home Assistant needs to be reachable from the internet (e.g. via [Home Assistant Cloud / Nabu Casa](https://www.nabucasa.com/) or a reverse proxy). The webhook id acts as a secret - **keep the URL private.**
+> **Note:** Jamvue must be able to reach this URL. If Jamvue runs in the cloud, your Home Assistant needs to be reachable from the internet (e.g. via [Home Assistant Cloud / Nabu Casa](https://www.nabucasa.com/) or a reverse proxy). The webhook id acts as a secret - **keep the URL private.**
 
 ### Finding the URL again
 
 Forgot the URL? You can retrieve it any time without changing it:
 
-- **Settings → Devices & Services → JamVue → Configure** re-displays the URL(s).
-- It's also written to the log at every startup - search **Settings → System → Logs** for `JamVue webhook`.
+- **Settings → Devices & Services → Jamvue → Configure** re-displays the URL(s).
+- It's also written to the log at every startup - search **Settings → System → Logs** for `Jamvue webhook`.
 
 ### Which external URL is shown?
 
@@ -72,14 +72,14 @@ external URL is configured. So if you want your own domain shown, set it there
 once and it benefits all of Home Assistant.
 
 If you'd rather not change your global external URL - or you want a different
-address *just* for this webhook - open **JamVue → Configure** and set the
+address *just* for this webhook - open **Jamvue → Configure** and set the
 **External URL override**. When set, it's shown first; clear it to go back to the
 auto-detected URLs. (This only changes the address displayed/logged; the webhook
 itself works on whatever address actually reaches your Home Assistant.)
 
 ## Webhook payload
 
-JamVue will `POST` a JSON **object** to the webhook URL. Supported fields:
+Jamvue will `POST` a JSON **object** to the webhook URL. Supported fields:
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -87,7 +87,7 @@ JamVue will `POST` a JSON **object** to the webhook URL. Supported fields:
 | `artist` | string | Artist name |
 | `album_art_url` | string | URL to album artwork |
 | `album` | string | **Optional.** Album name |
-| `track_id` | string | **Optional.** JamVue internal track ID |
+| `track_id` | string | **Optional.** Jamvue internal track ID |
 | `duration` | number | **Optional.** Track duration in seconds |
 | `position` | number | **Optional.** Seconds into the track at resolution time. Enables a live, self-advancing progress bar. Omit it (vinyl is often recognised mid-track) and no progress bar is shown |
 | `state` | string | **Optional.** `playing` (default), or `idle`/`stopped`/`paused` to change player state |
@@ -117,11 +117,11 @@ When a payload includes a `title` or `artist`, the player switches to **Playing*
 
 ## Entity
 
-The integration creates a single `media_player.jamvue` entity. When a track is resolved it enters the `playing` state with full media metadata - artist, title, album, and artwork - ready to display on dashboards or use in automations.
+The integration creates a single `media_player.Jamvue` entity. When a track is resolved it enters the `playing` state with full media metadata - artist, title, album, and artwork - ready to display on dashboards or use in automations.
 
 ## Automations (examples)
 
-Every webhook payload is re-emitted as a `jamvue_track_resolved` event, so you can trigger automations directly:
+Every webhook payload is re-emitted as a `Jamvue_track_resolved` event, so you can trigger automations directly:
 
 ### New Record
 Now-playing notification with album art
@@ -133,7 +133,7 @@ automation:
   - alias: "Now playing with artwork"
     trigger:
       - platform: event
-        event_type: jamvue_track_resolved
+        event_type: Jamvue_track_resolved
     condition:
       - condition: template
         value_template: "{{ trigger.event.data.title is defined }}"
@@ -158,7 +158,7 @@ automation:
   - alias: "Special effect for favourite artists"
     trigger:
       - platform: event
-        event_type: jamvue_track_resolved
+        event_type: Jamvue_track_resolved
     action:
       - choose:
           - conditions:
@@ -175,7 +175,7 @@ automation:
                   brightness_pct: 40
 ```
 
-### JamVue Captain Now
+### Jamvue Captain Now
 Hand the room over to vinyl
 
 When a record is detected, pause whatever's streaming elsewhere (Music Assistant, Sonos, etc.) so the turntable takes over without two sources fighting. The state == playing check avoids triggering on stop events.
@@ -185,7 +185,7 @@ automation:
   - alias: "Vinyl takes priority"
     trigger:
       - platform: event
-        event_type: jamvue_track_resolved
+        event_type: Jamvue_track_resolved
     condition:
       - condition: template
         value_template: "{{ trigger.event.data.state | default('playing') != 'stopped' }}"
@@ -207,7 +207,7 @@ automation:
   - alias: "Vinyl mode - on"
     trigger:
       - platform: event
-        event_type: jamvue_track_resolved
+        event_type: Jamvue_track_resolved
     condition:
       - condition: template
         value_template: "{{ trigger.event.data.state | default('playing') != 'stopped' }}"
@@ -233,7 +233,7 @@ automation:
   - alias: "Vinyl mode - off"
     trigger:
       - platform: event
-        event_type: jamvue_track_resolved
+        event_type: Jamvue_track_resolved
     condition:
       - condition: template
         value_template: "{{ trigger.event.data.state | default('playing') == 'stopped' }}"
@@ -246,7 +246,7 @@ automation:
 ## Testing
 
 A small harness in [`testing/`](testing/) fires example webhook events at your
-instance so you can confirm everything works before adding your webhook URL to the JamVue settings.
+instance so you can confirm everything works before adding your webhook URL to the Jamvue settings.
 
 ```bash
 python send_test_events.py "https://homeassistant.example.com/api/webhook/<id>"
@@ -262,11 +262,11 @@ python send_test_events.py --list               # show all scenarios
 
 ## Uninstalling
 
-JamVue for Home Assistant cleans up after itself - there are no stray files, helpers, or background tasks to chase down.
+Jamvue for Home Assistant cleans up after itself - there are no stray files, helpers, or background tasks to chase down.
 
-1. **Remove the integration:** Go to **Settings → Devices & Services → JamVue → ⋮ → Delete**.
-   This unregisters the webhook (the URL stops working immediately) and removes the `media_player.jamvue` entity and the JamVue device from Home Assistant.
-2. **Remove the component (optional):** In HACS, open JamVue → ⋮ → **Remove**, or delete the `custom_components/jamvue/` folder manually. Restart Home Assistant.
+1. **Remove the integration:** Go to **Settings → Devices & Services → Jamvue → ⋮ → Delete**.
+   This unregisters the webhook (the URL stops working immediately) and removes the `media_player.Jamvue` entity and the Jamvue device from Home Assistant.
+2. **Remove the component (optional):** In HACS, open Jamvue → ⋮ → **Remove**, or delete the `custom_components/Jamvue/` folder manually. Restart Home Assistant.
 
 All integration state lives inside the config entry, which Home Assistant deletes for you in step 1 - so step 2 is just housekeeping.
 
