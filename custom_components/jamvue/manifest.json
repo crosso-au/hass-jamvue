@@ -4,11 +4,11 @@
   "codeowners": [],
   "config_flow": true,
   "dependencies": ["webhook"],
-  "documentation": "https://jamvue.com/help",
+  "documentation": "https://github.com/crosso-au/hass-jamvue",
   "integration_type": "service",
   "iot_class": "local_push",
-  "issue_tracker": "https://jamvue.com/help",
+  "issue_tracker": "https://github.com/crosso-au/hass-jamvue/issues",
   "requirements": [],
   "single_config_entry": false,
-  "version": "1.3.0"
+  "version": "1.3.1"
 }
